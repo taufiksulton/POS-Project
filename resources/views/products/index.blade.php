@@ -33,7 +33,7 @@
                     <td>{{$product->name}}</td>
                     <td><img class="product-img" src="{{ Storage::url($product->image) }}" alt=""></td>
                     <td>{{$product->barcode}}</td>
-                    <td>{{$product->price}}</td>
+                    <td>Rp.{{$product->price}}</td>
                     <td>{{$product->quantity}}</td>
                     <td>
                         <span class="right badge badge-{{ $product->status ? 'success' : 'danger' }}">{{$product->status ? 'Active' : 'Inactive'}}</span>
@@ -68,11 +68,11 @@
             })
 
             swalWithBootstrapButtons.fire({
-                title: 'Are you sure?',
-                text: "Do you really want to delete this product?",
+                title: 'Apa kamu yakin?',
+                text: "Apakah Anda benar-benar ingin menghapus produk ini?",
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
+                confirmButtonText: 'Ya, Hapus!',
                 cancelButtonText: 'No',
                 reverseButtons: true
             }).then((result) => {

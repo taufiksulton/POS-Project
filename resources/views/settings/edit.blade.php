@@ -38,6 +38,18 @@
                 </span>
                 @enderror
             </div>
+
+            
+            <div class="form-group">
+                <label for="currency_symbol">Rupiah symbol</label>
+                <input type="text" name="currency_symbol" class="form-control @error('idr_symbol') is-invalid @enderror" id="idr_symbol" placeholder="Idr symbol" value="{{ old('currency_symbol', config('settings.currency_symbol')) }}">
+                @error('idr_symbol')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+
             <div class="form-group">
                 <label for="warning_quantity">Warning quantity</label>
                 <input type="text" name="warning_quantity" class="form-control @error('warning_quantity') is-invalid @enderror" id="warning_quantity" placeholder="Warning quantity" value="{{ old('warning_quantity', config('settings.warning_quantity')) }}">
