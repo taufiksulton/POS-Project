@@ -63,7 +63,7 @@ class CustomerController extends Controller
         if (!$customer) {
             return redirect()->back()->with('error', 'Maaf, ada masalah saat membuat pelanggan.');
         }
-        return redirect()->route('customers.index')->with('success', 'Success, your customer have been created.');
+        return redirect()->route('customers.index')->with('success', 'Sukses, pelanggan Anda telah tercipta.');
     }
 
     /**
